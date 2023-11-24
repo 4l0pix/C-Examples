@@ -24,6 +24,15 @@ void displayList(struct Node* node){
     }
 }
 
+void disalloc(struct Node* node){
+    struct Node* tmp; // We declare a temp value
+    while (node != NULL){ // Until we reach the end of the list
+        tmp = node; // We keep the node in a temporary value
+        node = node->next; // We transfer the next node to our current node
+        free(tmp); // And we erase the contents from the first node
+    }
+}
+
 int main(){
     // Lets initialize a list of 3 nodes
     struct Node* head;
@@ -52,6 +61,7 @@ int main(){
 
     //In order to view the list we call a display function and we only send the first node
     displayList(head);
+    disalloc(curr_node); // We dis-allocate the memory
 
     return 0;
 }
