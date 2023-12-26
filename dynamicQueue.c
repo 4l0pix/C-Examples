@@ -1,5 +1,4 @@
-
- *Ta sxolia stin parakato askisi einai grammena se greeklish
+/*Ta sxolia stin parakato askisi einai grammena se greeklish
  *gia tin apofigi sfalmaton kata tin anagnwsi apo diaforetika programmata*/
 
 #include<stdio.h>
